@@ -1,0 +1,12 @@
+cmake_minimum_required(VERSION 3.1 FATAL_ERROR)
+project(DeviceIo)
+
+if(CPU_ARCH STREQUAL "arm")
+	message("CPU_ARCH is ${CPU_ARCH}")
+	install(FILES ${CMAKE_SOURCE_DIR}/DeviceIO/lib32/libDeviceIo.so DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
+endif()
+if(CPU_ARCH STREQUAL "aarch64")
+	message("CPU_ARCH is ${CPU_ARCH}")
+	install(FILES ${CMAKE_SOURCE_DIR}/DeviceIO/lib64/libDeviceIo.so DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
+endif()
+install(DIRECTORY ${CMAKE_SOURCE_DIR}/DeviceIO/include/DeviceIo DESTINATION ${CMAKE_INSTALL_PREFIX}/include)
