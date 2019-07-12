@@ -28,7 +28,51 @@ hciconfig hci0 up
 hciconfig hci0 piscan 
 
 
----------------------------------------------------deviceio_test
+
+--------------------------ble_by_open_shell
+
+# bsa_ble_wifi_introducer.sh start
+
+hcd_file = /system/etc/firmware/BCM4345C0.hcd
+
+[   17.211945] [BT_RFKILL]: bt shut off power
+
+[   20.218469] [BT_RFKILL]: rfkill_rk_set_power: set bt wake_host pin output high!
+
+[   20.281006] [BT_RFKILL]: rfkill_rk_set_power: set bt wake_host pin input!
+
+[   20.281072] [BT_RFKILL]: ENABLE UART_RTS
+
+[   20.382050] [BT_RFKILL]: DISABLE UART_RTS
+
+[   20.382149] [BT_RFKILL]: bt turn on power
+
+start broadcom bluetooth server bsa_sever
+
+killall: bsa_server: no process killed
+
+BSA_trace 1@ 12/31 19h:00m:23s:565ms: bsa_sv_dm_set_3d_type type=chip_id (not safe)
+
+BSA_trace 2@ 12/31 19h:00m:23s:566ms: Command [all] with arg [0]
+
+BSA_trace 3@ 12/31 19h:00m:23s:567ms: [ all ] trace level = 0
+
+BSA_trace 4@ 12/31 19h:00m:23s:567ms: BTM_SetTraceLevel
+
+start broadcom bluetooth app_manager
+
+start broadcom bluetooth wifi introducer
+
+Created thread with thread_id=  b6dab460
+
+Created thread with thread_id=  b6cd9460
+
+|----- bluetooth ble wifi config ------|
+
+
+
+
+---------------------------------------------------ble by no open deviceio_test simple app
 
 # deviceio_test blewifi
 
