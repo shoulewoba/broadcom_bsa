@@ -71,6 +71,18 @@ Created thread with thread_id=  b6cd9460
 
 
 
+---------
+  325 root      3380 S    wpa_supplicant -B -i wlan0 -c /data/cfg/wpa_supplica
+  
+  355 root     20064 S    bsa_server -r 12 -p /system/etc/firmware/BCM4345C0.h
+  
+  366 root      3352 S    app_manager -s
+  
+  367 root      3932 S    app_ble_wifi_introducer
+
+
+
+
 
 ---------------------------------------------------ble by no open deviceio_test simple app
 
@@ -109,4 +121,16 @@ BSA_trace 3@ 12/31 19h:00m:18s:236ms: [ all ] trace level = 0
 BSA_trace 4@ 12/31 19h:00m:18s:237ms: BTM_SetTraceLevel
 
 DEBUG: check_bsa_server: wait bsa_server open.
+
+
+-------
+  326 root      3380 S    wpa_supplicant -B -i wlan0 -c /data/cfg/wpa_supplica
+
+  398 root      7012 S    deviceio_test blewifi
+  
+  408 root     20064 S    bsa_server -r 12 -p /system/etc/firmware/BCM4345C0.h
+
+
+
+
 
